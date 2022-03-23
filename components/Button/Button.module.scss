@@ -1,0 +1,30 @@
+.chipsButton {
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 4px;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.text {
+  border: none;
+  box-shadow: none;
+}
+
+.outlined {
+  color: var(--default);
+  background-color: inherit;
+  border-color: var(--default);
+}
+
+.contained {
+  color: var(--white);
+  background-color: var(--default);
+  border: none;
+}
