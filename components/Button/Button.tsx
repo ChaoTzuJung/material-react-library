@@ -44,12 +44,11 @@ export const Button = ({
   onClick,
   ...other
 }: ButtonPropsI) => {
-  console.log("styles:", styles);
   const [customizedStyle, setCustomizedStyle] = useState(style);
   const ref: MutableRefObject<HTMLButtonElement | null> = useRef(null);
 
   const composeClass = () => {
-    return classNames(styles.chipsButton, {
+    return classNames(styles.chipsButton, className, {
       [styles.text]: variant === "text",
       [styles.outlined]: variant === "outlined",
       [styles.contained]: variant === "contained",
@@ -57,6 +56,7 @@ export const Button = ({
       [styles.secondary]: color === "secondary",
       [styles.success]: color === "success",
       [styles.warning]: color === "warning",
+      [styles.disabled]: disabled,
     });
   };
 
