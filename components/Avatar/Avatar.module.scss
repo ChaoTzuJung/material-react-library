@@ -1,0 +1,35 @@
+.chipsAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  color: var(--white);
+  background-color: var(--lightblue);
+  font-size: 0.88rem;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: transparent;
+  object-fit: cover;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.rounded {
+  border-radius: 4px;
+}
+
+.square {
+  border-radius: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
