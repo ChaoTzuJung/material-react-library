@@ -5,6 +5,16 @@ import styles from "./Avatar.module.scss";
 import { AvatarPropsI } from "./type";
 import { useLoaded } from "../../hooks/useLoaded";
 
+/**
+ * Avatar
+ * Avatars are found throughout material design with uses in everything from tables to dialog menus.
+ *
+ * @param children Used to render icon or text elements inside the Avatar if src is not set.
+ * @param alt Used in combination with src to provide an alt attribute for the rendered img element.
+ * @param src The src attribute for the img element.
+ * @param variant The shape of the avatar.
+ * @function onClick Callback fired when the Avatar is clicked.
+ */
 export const Avatar = ({
   children: childrenProp,
   className,

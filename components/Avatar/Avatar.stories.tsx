@@ -1,8 +1,8 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Avatar } from "./Avatar";
 import { BiRun } from "react-icons/bi";
 import hange from "../../assets/hange.png";
-import { Avatar } from "./Avatar";
 
 export default {
   title: "Components/Avatar",

@@ -1,4 +1,3 @@
-import React from "react";
 import { ParentsBaseT } from "../../types";
 
 export interface AvatarPropsI extends ParentsBaseT {
