@@ -1,0 +1,27 @@
+.enter {
+  min-height: 0;
+}
+
+.enterActive {
+  min-height: 64px;
+  transition: min-height 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.enterDone {
+  min-height: 64px;
+}
+
+.exit {
+  min-height: 64px;
+}
+
+.exitActive {
+  min-height: 0;
+  transition: min-height 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.exitDone {
+  min-height: 0;
+}

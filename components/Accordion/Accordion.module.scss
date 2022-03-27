@@ -1,0 +1,53 @@
+.chipsAccordion {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: var(--white);
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%),
+    0 1px 3px 0 rgb(0 0 0 / 12%);
+
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.38;
+  }
+
+  &:first-of-type {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  &:last-of-type {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+.chipsAccordionSummary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  cursor: pointer;
+
+  & > .content {
+    margin: 12px 0;
+  }
+
+  & > .icon {
+    display: flex;
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease-in-out;
+
+    &.direction {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.chipsAccordionDetail {
+  display: none;
+  padding: 8px 16px 16px;
+
+  &.expand {
+    display: block;
+  }
+}

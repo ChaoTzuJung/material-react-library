@@ -1,0 +1,29 @@
+.enter {
+  display: none;
+  height: 0;
+}
+
+.enterActive {
+  display: block;
+  height: auto;
+}
+
+.enterDone {
+  display: block;
+  height: auto;
+}
+
+.exit {
+  display: block;
+  height: auto;
+}
+
+.exitActive {
+  display: none;
+  height: 0;
+}
+
+.exitDone {
+  display: none;
+  height: 0;
+}
