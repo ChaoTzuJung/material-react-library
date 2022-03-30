@@ -1,0 +1,150 @@
+.chipsCheckbox {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  &.disabled {
+    & > .input {
+      cursor: no-drop;
+    }
+
+    & > .fake {
+      cursor: no-drop;
+    }
+
+    & > .label {
+      color: var(--default);
+      cursor: no-drop;
+    }
+
+    &:hover .fake {
+      border-color: var(--default);
+    }
+
+    input:checked ~ .fake {
+      background-color: var(--default);
+    }
+  }
+
+  & > .input {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  & > .fake {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border: 2.5px solid var(--default);
+    border-radius: 2px;
+    transition: 0.25s linear;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 20%;
+      height: 50%;
+      border: solid var(--white);
+      border-width: 0 2px 2px 0;
+      opacity: 0;
+      transition: 0.25s linear;
+      transform: translate(-50%, -60%) rotate(45deg);
+    }
+  }
+
+  & > .label {
+    display: block;
+    padding-left: 10px;
+    cursor: text;
+  }
+}
+
+.default {
+  &:hover ~ .fake {
+    border-color: var(--default);
+  }
+
+  &:checked ~ .fake {
+    background-color: var(--default);
+    border: none;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.primary {
+  &:hover ~ .fake {
+    border-color: var(--primary);
+  }
+
+  &:checked ~ .fake {
+    background-color: var(--primary);
+    border: none;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.secondary {
+  &:hover ~ .fake {
+    border-color: var(--secondary);
+  }
+
+  &:checked ~ .fake {
+    background-color: var(--secondary);
+    border: none;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.success {
+  &:hover ~ .fake {
+    border-color: var(--success);
+  }
+
+  &:checked ~ .fake {
+    background-color: var(--success);
+    border: none;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.warning {
+  &:hover ~ .fake {
+    border-color: var(--warning);
+  }
+
+  &:checked ~ .fake {
+    background-color: var(--warning);
+    border: none;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
